@@ -73,6 +73,7 @@ __all__ = [
     "Qwen3TTSBackend",
     "Maya1Backend",
     "MAYA1_VOICES",
+    "FishTTSBackend",
 ]
 
 try:
@@ -90,3 +91,8 @@ try:
 except ImportError:
     Maya1Backend = None
     MAYA1_VOICES = {}
+
+try:
+    from .fishtts import FishTTSBackend
+except ImportError:
+    FishTTSBackend = None
